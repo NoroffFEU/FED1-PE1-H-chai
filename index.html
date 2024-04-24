@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HotView Labs' Blog Page">
+  <title>HotView Labs</title>
+  <link rel="stylesheet" href="css/index.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Hind+Vadodara:wght@300;400;500;600;700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script type="module" src="./scripts/home.mjs"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="HotView Labs Logo" title="Jump to Blog Feed Page">
+    </a>
+    <div>
+      <nav>
+        <ul>
+          <li>About Us</li>
+          <li>Contact</li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <iconify-icon icon="mdi:instagram" width="16px" height="16px"  style="color: #085ca6"></iconify-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="LinkedIn">
+              <iconify-icon icon="ri:linkedin-fill" width="16px" height="16px"  style="color: #085ca6"></iconify-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter">
+              <iconify-icon icon="mdi:twitter" width="16px" height="16px"  style="color: #085ca6"></iconify-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button>Login</button>
+    </div>
+    <!-- hamburger menu -->
+    <div class="hamburger-menu-container">
+      <input type="checkbox" id="hamburger-menu">
+      <label for="hamburger-menu" class="open-menu">
+        <iconify-icon icon="pajamas:hamburger" style="color: #085ca6;" width="22" aria-label="Open menu"></iconify-icon>
+      </label>
+      <label for="hamburger-menu" class="close-menu">
+        <iconify-icon icon="icon-park-outline:close" style="color: #085ca6;" width="22" aria-label="Close menu"></iconify-icon>
+      </label>
+      <!-- <div class="sp-nav">
+        <nav>
+          <ul class="sp-nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visits.html">Visits</a></li>
+            <li><a href="exhibits.html">Exhibits</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div> -->
+    </div>
+  </header>
+
+  <main>
+    <section class="mian-visual">
+      <div class="main-left">
+        <h1>Blog</h1>
+        <p>Welcome to the HotView Labs blog.</p>
+        <p>Your window into the world of tech research and development.</p>
+        <p>Explore the latest trends, innovations, and insights as we journey through the exciting realm of technology.</p>
+      </div>
+      <div class="main-right">
+        <h2>Latest</h2>
+        <!-- carousel JS & creating HTML dynamically -->
+        <div class="latest"></div>
+      </div>
+    </section>
+    <div class="filter">
+      <div class="tags"></div>
+      <button class="reset">Reset Filters</button>
+      <div class="sort">
+        <iconify-icon icon="mdi:sort" width="16px" height="16px"  style="color: #085ca6"></iconify-icon>
+        <button>Oldest First</button>
+        <button>Newest First</button>
+      </div>
+    </div>
+    <section class="feed">
+      <!-- feed JS & creating HTML dynamically -->
+      <div class="pagination"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <a href="index.html">
+        <img src="images/logo.png" alt="HotView Labs Logo" title="Jump to Blog Feed Page">
+      </a>
+      <div>
+        <nav>
+          <ul>
+            <li>About Us</li>
+            <li>Contact</li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <iconify-icon icon="mdi:instagram" width="16px" height="16px"  style="color: #085ca6"></iconify-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="LinkedIn">
+                <iconify-icon icon="ri:linkedin-fill" width="16px" height="16px"  style="color: #085ca6"></iconify-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter">
+                <iconify-icon icon="mdi:twitter" width="16px" height="16px"  style="color: #085ca6"></iconify-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button>Login</button>
+      </div>
+    </div>
+    <div class="footer-sub-links">
+      <ul>
+        <li>
+          <a href="#">Terms Of Use</a>
+        </li>
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#">Icons by jojooid</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

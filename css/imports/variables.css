@@ -1,0 +1,24 @@
+:root {
+  --font-black: #050B1A;
+  --font-blue: #085CA6;
+  --bg-light: #E9EFFF;
+  --cta-green: #19AD80;
+  --cta-red: rgba(251, 51, 51, .8);
+  --font-vollkorn: "Vollkorn", serif;
+  --font-hv: "Hind Vadodara", sans-serif;
+  --font-cormorant: "Cormorant SC", serif;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-hv);
+  color: var(--font-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

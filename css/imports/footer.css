@@ -1,0 +1,103 @@
+footer {
+  background-color: var(--bg-light);
+  padding-top: 5.6rem;
+  padding-bottom: 3.2rem;
+}
+
+.footer-sp-nav-menu {
+  font-size: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.footer-sp-sns-menu {
+  gap: 1.6rem;
+  margin-bottom: 5.6rem;
+}
+
+.footer-login-btn {
+  margin-bottom: 6.4rem;
+}
+
+.footer-logo-pc {
+  display: none;
+}
+
+.footer-logo {
+  display: block;
+  text-align: center;
+}
+
+.footer-sub-links {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: center;
+  margin-top: 1.6rem;
+  font-size: 1.2rem;
+  
+  & a {
+    color: var(--font-blue);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  footer {
+    padding: 5.6rem 10.4rem 1.6rem 10.4rem;
+
+    & nav {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    & a {
+      transition: all 0.3s;
+    }
+
+    & a:hover {
+      color: rgba(8, 92, 166, 0.6);
+    }
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-logo-sp {
+    display: none;
+  }
+
+  .footer-logo-pc {
+    display: block;
+  }
+
+  .footer-pc-nav-menu {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    margin-right: 6.4rem;
+    align-items: flex-start;
+  }
+
+  .footer-pc-sns-menu {
+    margin-bottom: 0;
+    margin-right: 12rem;
+
+    & iconify-icon {
+      transition: all 0.3s;
+    }
+
+    & iconify-icon:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .footer-login-btn {
+    margin-bottom: 0rem;
+  }
+
+  .footer-sub-links {
+    gap: 4.8rem;
+    margin-top: 10.4rem;
+    font-size: 1.4rem;
+  }
+}

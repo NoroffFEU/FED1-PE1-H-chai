@@ -39,6 +39,19 @@
   width: 100%;
 }
 
+.to-register {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 2.4rem;
+  display: inline;
+}
+
+.register-link {
+  margin-left: 5px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 1024px) {
 
   .form-container {

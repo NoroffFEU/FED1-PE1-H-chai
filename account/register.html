@@ -130,12 +130,26 @@
     <main>
       <h1 class="page-title">Register</h1>
       <div class="form-container">
-        <form action="">
-          <input type="text" name="" id="" placeholder="Username" />
-          <input type="text" name="" id="" placeholder="E-mail" />
-          <input type="text" name="" id="" placeholder="Password" />
+        <form>
+          <input
+            type="text"
+            name=""
+            id="username"
+            placeholder="Username"
+            required
+          />
+          <input type="text" name="" id="email" placeholder="E-mail" required />
+          <input
+            type="text"
+            name=""
+            id="password"
+            placeholder="Password"
+            required
+          />
         </form>
-        <button class="form-btn">Register</button>
+        <button class="form-btn" id="register-button" type="submit">
+          Register
+        </button>
       </div>
     </main>
 

@@ -56,10 +56,8 @@ async function collectFormData (event) {
   }
 
   try {
-    const response = await registerUser(API_REGISTER_USER, user);
-    console.log(response);
+    await registerUser(API_REGISTER_USER, user);
     alert(`Registration successful!\nUsername: ${user.name}\nEmail: ${user.email}`);
-    username = '';
   } catch (error) {
     alert(`${error.message}. Please try again.`);
   }

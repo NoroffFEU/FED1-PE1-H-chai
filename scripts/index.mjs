@@ -1,5 +1,6 @@
 /* import { API_REGISTER_USER } from "./constants.mjs"; */
 import { sendFormData } from "./register.mjs";
+import { sendLoginData } from "./login.mjs";
 
 /* const user = {
   name: 'hikari_fedaug23f',
@@ -7,4 +8,5 @@ import { sendFormData } from "./register.mjs";
   password: 'hikari12345',
 } */
 
-sendFormData();
+//sendFormData();
+sendLoginData();

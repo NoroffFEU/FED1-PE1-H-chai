@@ -127,20 +127,17 @@
     </header>
 
     <main class="sp-main">
-      <h1>Edit</h1>
-      <section class="edit-form">
-        <form action="">
-          <label for=""></label>
-          <input type="text" />
-          <label for=""></label>
-          <input type="text" />
-          <label for=""></label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <button class="form-btn post-btn" id="update-button" type="submit">
-            Update
-          </button>
-          <button class="form-btn post-btn" id="delete-button" type="submit">
-            Delete This Post
+      <h1 class="page-title">New Post</h1>
+      <section class="blog-post-form">
+        <form>
+          <label for="title">Title</label>
+          <input id="title" type="text" required />
+          <label for="img-url">Image URL</label>
+          <input id="img-url" type="text" required />
+          <label for="content">Content</label>
+          <textarea id="content" cols="30" rows="10"></textarea>
+          <button class="form-btn post-btn" id="create-button" type="submit">
+            Post
           </button>
         </form>
       </section>

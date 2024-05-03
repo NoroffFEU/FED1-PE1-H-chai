@@ -3,6 +3,12 @@
 @import "imports/header.css";
 @import "imports/footer.css";
 @import "imports/form.css";
+@import "imports/create.css";
+
+.sp-main {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 
 .page-title {
   font-family: var(--font-vollkorn);
@@ -15,7 +21,6 @@
 
 .main-visual {
   margin-top: 5.6rem;
-  padding: 0 2rem;
 
   .main-left {
     margin-bottom: 5.6rem;
@@ -45,6 +50,10 @@
 
 @media screen and (min-width: 1024px) {
 
+  .sp-main {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .page-title {
     font-size: 4rem;
     margin-top: 8rem;

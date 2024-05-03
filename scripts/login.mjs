@@ -20,7 +20,7 @@ async function loginUser(url, data) {
       console.log(accessToken);
       window.location.href = '../post/index.html';
     } else {
-      throw new Error(json.error);
+      throw new Error(json.errors[0].message);
     }
     
     return json;
@@ -30,7 +30,7 @@ async function loginUser(url, data) {
   }
 }
 
-export function sendLoginData() {
+function sendLoginData() {
   const loginButton = document.getElementById('login-button');
   loginButton.addEventListener('click', collectUserData);
 }
@@ -62,3 +62,5 @@ async function collectUserData(event) {
     alert('Login failed. Please try again.');
   }
 }
+
+sendLoginData();

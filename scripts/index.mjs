@@ -1,6 +1,6 @@
 /* import { API_REGISTER_USER } from "./constants.mjs"; */
-import { sendFormData } from "./register.mjs";
-import { sendLoginData } from "./login.mjs";
+//import { sendFormData } from "./register.mjs";
+//import { sendLoginData } from "./login.mjs";
 
 /* const user = {
   name: 'hikari_fedaug23f',
@@ -9,4 +9,4 @@ import { sendLoginData } from "./login.mjs";
 } */
 
 //sendFormData();
-sendLoginData();
+//sendLoginData();

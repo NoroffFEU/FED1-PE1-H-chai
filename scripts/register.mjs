@@ -29,7 +29,7 @@ async function registerUser(url, data) {
   }
 }
 
-export function sendFormData() {
+function sendFormData() {
   const registerButton = document.getElementById('register-button');
   registerButton.addEventListener('click', collectFormData);
 }
@@ -63,3 +63,5 @@ async function collectFormData (event) {
   }
   
 }
+
+sendFormData();

@@ -13,12 +13,66 @@
   margin-bottom: 2.4rem;
 }
 
+.main-visual {
+  margin-top: 5.6rem;
+  padding: 0 2rem;
+
+  .main-left {
+    margin-bottom: 5.6rem;
+  }
+
+  h1 {
+    font-family: var(--font-vollkorn);
+    font-size: 6.4rem;
+    color: var(--font-blue);
+    margin-bottom: .8rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-family: var(--font-vollkorn);
+    font-size: 2.8rem;
+    color: var(--font-blue);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
 
   .page-title {
     font-size: 4rem;
     margin-top: 8rem;
     margin-bottom: 4rem;
+  }
+
+  .main-visual {
+    display: flex;
+    padding: 0 12.8rem 0 15.2rem;
+
+    .main-left {
+      margin-right: 12rem;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      font-size: 13.6rem;
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      width: 52.8rem;
+    }
+
+    h2 {
+      font-size: 4.8rem;
+      margin: 1.6rem 0;
+    }
   }
 
 }

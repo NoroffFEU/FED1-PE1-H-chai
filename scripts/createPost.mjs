@@ -32,20 +32,26 @@ async function createNewPost(event) {
   const titleInput = document.getElementById('title');
   const imageInput = document.getElementById('img-url');
   const imageAltInput = document.getElementById('img-alt');
+  const tagsInput = document.getElementById('tags')
   const contentInput = document.getElementById('content');
 
   let title = titleInput.value;
   let imageUrl = imageInput.value;
   let imageAlt = imageAltInput.value;
+  let tags = tagsInput.value;
+  let tagsArray = tags.split(',');
+  tagsArray = tagsArray.map(tag => tag.trim());
   let content = contentInput.value;
 
   titleInput.value = '';
   imageInput.value = '';
   imageAltInput.value = '';
+  tagsInput.value = '';
   contentInput.value = '';
 
   const blogPost = {
     title: title,
+    tags: tagsArray,
     body: content,
     media: {
       url: imageUrl,

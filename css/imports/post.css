@@ -1,0 +1,18 @@
+.create-btn {
+  display: block;
+  width: 66%;
+  text-align: center;
+  margin: 0 auto 3.2rem auto;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .article {
+    padding: 0 12.8rem;
+  }
+
+  .create-btn {
+    width: 25%;
+    margin: 0 0 5.6rem auto;
+  }
+}

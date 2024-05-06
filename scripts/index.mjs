@@ -3,9 +3,9 @@
 //import { sendLoginData } from "./login.mjs";
 
 /* const user = {
-  name: 'hikari_fedaug23f',
-  email: 'hikari-account@noroff.no',
-  password: 'hikari12345',
+  name: 'hikari',
+  email: 'hikari-project-exam@stud.noroff.no',
+  password: 'hikarifedaug23f',
 } */
 
 //sendFormData();

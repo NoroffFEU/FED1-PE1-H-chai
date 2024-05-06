@@ -1,5 +1,7 @@
 import { API_LOGIN } from "./constants.mjs";
 
+let accessToken;
+
 async function loginUser(url, data) {
   try {
     const postData = {
@@ -14,25 +16,20 @@ async function loginUser(url, data) {
     const json = await response.json();
 
     if (response.ok) {
-      const accessToken = json.data.accessToken;
+      accessToken = json.data.accessToken;
       localStorage.setItem('accessToken', accessToken);
       console.log(json);
       console.log(accessToken);
       window.location.href = '../post/index.html';
     } else {
-      throw new Error(json.errors[0].message);
+      throw new Error(json.error);
     }
     
     return json;
   } catch (error) {
     console.log(error);
-    throw error
+    throw error;
   }
-}
-
-function sendLoginData() {
-  const loginButton = document.getElementById('login-button');
-  loginButton.addEventListener('click', collectUserData);
 }
 
 async function collectUserData(event) {
@@ -63,4 +60,5 @@ async function collectUserData(event) {
   }
 }
 
-sendLoginData();
+const loginButton = document.getElementById('login-button');
+loginButton.addEventListener('click', collectUserData);

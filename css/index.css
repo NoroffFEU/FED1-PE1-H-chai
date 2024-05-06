@@ -4,6 +4,7 @@
 @import "imports/footer.css";
 @import "imports/form.css";
 @import "imports/create.css";
+@import "imports/post.css";
 
 .sp-main {
   margin-left: 2rem;

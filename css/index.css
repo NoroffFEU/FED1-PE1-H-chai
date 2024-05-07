@@ -31,7 +31,7 @@
     font-family: var(--font-vollkorn);
     font-size: 6.4rem;
     color: var(--font-blue);
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
   }
 
   p {
@@ -49,8 +49,69 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
 
+.post-container {
+  width: 100%;
+  display: block;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: fill;
+  border-radius: 7px 7px 0 0;
+  margin-bottom: .4rem;
+}
+
+.post-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  .tag-list {
+    display: flex;
+    gap: .4rem;
+  }
+
+  .tag-item {
+    font-size: 1.4rem;
+    color: var(--font-blue);
+    font-weight: 500;
+    border: solid 1px var(--font-blue);
+    border-radius: 5rem;
+    padding: 0 1.6rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .date-container {
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+    color: #696F7E;
+  }
+
+  .calendar-icon {
+    font-size: 1.2rem;
+  }
+
+  .post-date {
+    font-size: 1.4rem;
+  }
+}
+
+.post-title {
+  font-family: var(--font-cormorant);
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
   .sp-main {
     margin-left: 0;
     margin-right: 0;
@@ -84,5 +145,4 @@
       margin: 1.6rem 0;
     }
   }
-
 }

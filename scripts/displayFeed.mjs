@@ -1,6 +1,7 @@
 import { API_BLOG_POST } from "./constants.mjs";
+import { renderPagination } from "./pagination.mjs";
 
-async function getPost (url) {
+export async function getPost (url) {
   try {
     const response = await fetch(url, {
       method: 'GET',
@@ -9,7 +10,6 @@ async function getPost (url) {
       }
     });
     const json = await response.json();
-    console.log(json);
 
     return json;
   } catch (error) {
@@ -71,7 +71,7 @@ function generateFeedHTML(post) {
   return postContainer;
 }
 
-function displayPosts(posts) {
+export function displayPosts(posts) {
   const postFeed = document.querySelector('.feed');
   postFeed.innerHTML = '';
   posts.forEach(post => {
@@ -81,4 +81,7 @@ function displayPosts(posts) {
 }
 
 const posts = await getPost(API_BLOG_POST);
-displayPosts(posts.data);
+displayPosts(posts.data.slice(0, 12));
+let totalPages = Math.ceil(posts.data.length / 12);
+renderPagination(totalPages);
+

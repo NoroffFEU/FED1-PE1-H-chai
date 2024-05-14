@@ -24,7 +24,7 @@ function formatDate(dateString) {
   return date.toLocaleDateString('en-GB', options);
 }
 
-function generateFeedHTML(post) {
+export function generateFeedHTML(post) {
   const postContainer = document.createElement('a');
   postContainer.classList.add('post-container');
   postContainer.id = post.id;
@@ -33,6 +33,9 @@ function generateFeedHTML(post) {
   thumbnail.classList.add('thumbnail');
   thumbnail.src = post.media.url;
   thumbnail.alt = post.media.alt;
+
+  const postTextContainer = document.createElement('div');
+  postTextContainer.classList.add('post-text-container');
 
   const postDetail = document.createElement('div');
   postDetail.classList.add('post-detail');
@@ -66,7 +69,9 @@ function generateFeedHTML(post) {
   postTitle.classList.add('post-title');
   postTitle.textContent = post.title;
 
-  postContainer.append(thumbnail, postDetail, postTitle);
+  postTextContainer.append(postDetail, postTitle);
+
+  postContainer.append(thumbnail, postTextContainer);
 
   return postContainer;
 }
@@ -84,4 +89,3 @@ const posts = await getPost(API_BLOG_POST);
 displayPosts(posts.data.slice(0, 12));
 let totalPages = Math.ceil(posts.data.length / 12);
 renderPagination(totalPages);
-

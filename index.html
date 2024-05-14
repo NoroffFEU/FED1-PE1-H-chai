@@ -135,9 +135,11 @@
       <section class="main-visual">
         <div class="main-left">
           <h1>Blog</h1>
-          <p>Welcome to the HotView Labs blog.</p>
-          <p>Your window into the world of tech research and development.</p>
-          <p>
+          <p class="sub-text">Welcome to the HotView Labs blog.</p>
+          <p class="sub-text">
+            Your window into the world of tech research and development.
+          </p>
+          <p class="sub-text">
             Explore the latest trends, innovations, and insights as we journey
             through the exciting realm of technology.
           </p>
@@ -145,7 +147,15 @@
         <div class="main-right">
           <h2>Latest</h2>
           <!-- carousel JS & creating HTML dynamically -->
-          <div class="latest"></div>
+          <div class="carousel">
+            <button class="carousel-button previous-button">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="latest"></div>
+            <button class="carousel-button next-button">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
       </section>
       <div class="filter">

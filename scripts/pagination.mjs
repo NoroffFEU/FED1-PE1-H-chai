@@ -36,7 +36,6 @@ function renderPostsForPage(pageNumber) {
 
 function updateButtonClassName() {
   const buttons = document.querySelectorAll('.page-button');
-  console.log(buttons);
   buttons.forEach((button) => {
     if (button.textContent === currentPage.toString()) {
       button.classList.add('current-page');

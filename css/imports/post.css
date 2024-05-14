@@ -1,3 +1,5 @@
+/* Blog Edit Feed Page */
+
 .create-btn {
   display: block;
   width: 66%;
@@ -6,13 +8,19 @@
 }
 
 @media screen and (min-width: 1024px) {
-
-  .article {
+  .page-top {
     padding: 0 12.8rem;
   }
 
   .create-btn {
     width: 25%;
     margin: 0 0 5.6rem auto;
+  }
+
+  .edit-feed {
+    
+    & .post-container::after {
+        content: "EDIT";
+      }
   }
 }

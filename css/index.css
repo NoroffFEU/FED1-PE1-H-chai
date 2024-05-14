@@ -22,10 +22,11 @@
 
 .main-visual {
   margin-top: 5.6rem;
+}
 
-  .main-left {
-    margin-bottom: 5.6rem;
-  }
+.main-left {
+  margin-bottom: 5.6rem;
+  text-align: center;
 
   h1 {
     font-family: var(--font-vollkorn);
@@ -34,11 +35,13 @@
     margin-bottom: 0.8rem;
   }
 
-  p {
+  .sub-text {
     font-size: 1.6rem;
     line-height: 1.5;
   }
+}
 
+.main-right {
   h2 {
     font-family: var(--font-vollkorn);
     font-size: 2.8rem;
@@ -49,6 +52,33 @@
   }
 }
 
+.carousel {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel-button {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--bg-light);
+  text-align: center;
+  border-radius: 5rem;
+
+  i {
+    font-size: 1.2rem;
+    color: var(--font-black);
+  }
+}
+
+.latest {
+  width: 80%;
+  background-color: var(--bg-light);
+  border-radius: 5px;
+}
+
 .feed {
   display: flex;
   flex-direction: column;
@@ -56,7 +86,6 @@
 }
 
 .post-container {
-  width: 100%;
   display: block;
 }
 
@@ -65,12 +94,16 @@
   aspect-ratio: 16/9;
   object-fit: fill;
   border-radius: 7px 7px 0 0;
-  margin-bottom: .4rem;
+}
+
+.post-text-container {
+  padding: 1.6rem 1.6rem 3.2rem 1.6rem;
 }
 
 .post-detail {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 1.6rem;
   margin-bottom: 1rem;
 
@@ -114,27 +147,27 @@
 }
 
 .pagination {
-    padding: 0 12.8rem;
-    margin-top: 6.4rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
+  padding: 0 12.8rem;
+  margin-top: 6.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 
-  .page-button {
-    width: 3.2rem;
-    height: 3.2rem;
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: var(--font-blue);
-    background-color: var(--bg-light);
-    border-radius: 5rem;
-  }
+.page-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--font-blue);
+  background-color: var(--bg-light);
+  border-radius: 5rem;
+}
 
-  .current-page {
-    color: white;
-    background-color: var(--font-blue);
-  }
+.current-page {
+  color: white;
+  background-color: var(--font-blue);
+}
 
 @media screen and (min-width: 1024px) {
   .sp-main {
@@ -150,25 +183,46 @@
   .main-visual {
     display: flex;
     padding: 0 12.8rem 0 15.2rem;
+  }
 
-    .main-left {
-      margin-right: 12rem;
-      margin-bottom: 0;
-    }
+  .main-left {
+    width: 40%;
+    margin-bottom: 0;
+    text-align: left;
 
     h1 {
       font-size: 13.6rem;
       margin-bottom: 1.6rem;
     }
 
-    p {
-      width: 52.8rem;
+    .sub-text {
+      width: 100%;
     }
+  }
 
+  .main-right {
+    width: 60%;
     h2 {
       font-size: 4.8rem;
       margin: 1.6rem 0;
     }
+  }
+
+  .carousel {
+    gap: 1.6rem;
+  }
+
+  .carousel-button {
+    width: 4rem;
+    height: 4rem;
+
+    i {
+      font-size: 1.6rem;
+    }
+  }
+
+  .latest {
+    width: 60%;
   }
 
   .feed {
@@ -222,13 +276,15 @@
   .thumbnail {
     aspect-ratio: 3/2;
     border-radius: 5px 5px 0 0;
-    margin-bottom: .8rem;
+  }
+
+  .post-text-container {
+    padding: 1.2rem 1.6rem 3.2rem 1.6rem;
   }
 
   .post-title {
     font-size: 2.3rem;
     line-height: 1.2;
-    margin-bottom: 3.2rem;
   }
 
 

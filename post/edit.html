@@ -1,3 +1,4 @@
+<!-- Edit Single Post Page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,7 +14,6 @@
       rel="stylesheet"
     />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script type="module" src="../scripts/index.mjs"></script>
   </head>
   <body>
     <header>
@@ -127,15 +127,19 @@
     </header>
 
     <main class="sp-main">
-      <h1>Edit</h1>
-      <section class="edit-form">
+      <h1 class="page-title">Edit</h1>
+      <section class="blog-post-edit-form">
         <form action="">
-          <label for=""></label>
-          <input type="text" />
-          <label for=""></label>
-          <input type="text" />
-          <label for=""></label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <label for="title">Title</label>
+          <input id="title" type="text" required />
+          <label for="img-url">Image URL</label>
+          <input id="img-url" type="text" required />
+          <label for="img-alt">Image alt</label>
+          <input id="img-alt" type="text" required />
+          <label for="tags">Tag</label>
+          <input id="tags" type="text" />
+          <label for="content">Content</label>
+          <textarea id="content" cols="30" rows="25" required></textarea>
           <button class="form-btn post-btn" id="update-button" type="submit">
             Update
           </button>

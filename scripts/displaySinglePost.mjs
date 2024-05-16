@@ -19,19 +19,32 @@ function generateSinglePostHTML(post) {
   title.textContent = post.title;
   
   const thumbnail = document.createElement('img');
-  thumbnail.classList.add('thumbnail');
+  thumbnail.classList.add('single-thumbnail');
   thumbnail.src = post.media.url;
   thumbnail.alt = post.media.alt;
   
   const authorDate = document.createElement('div');
   authorDate.classList.add('author-date');
+
+  const authorDetail = document.createElement('div');
+  authorDetail.classList.add('author-detail');
+  const authorIcon = document.createElement('i');
+  authorIcon.classList.add('fa-solid', 'fa-pen', 'author-icon');
   const author = document.createElement('p');
   author.classList.add('author');
   author.textContent = post.author.name;
+  authorDetail.append(authorIcon, author);
+
+  const dateDetail = document.createElement('div');
+  dateDetail.classList.add('date-detail');
+  const calendarIcon = document.createElement('i');
+  calendarIcon.classList.add('fa-solid', 'fa-calendar-days', 'calendar-icon');
   const date = document.createElement('p');
   date.classList.add('date');
   date.textContent = formatDate(post.created);
-  authorDate.append(author, date);
+  dateDetail.append(calendarIcon, date)
+
+  authorDate.append(authorDetail, dateDetail);
   
   const content = document.createElement('p')
   content.classList.add('content');

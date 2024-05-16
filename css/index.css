@@ -6,6 +6,7 @@
 @import "imports/create.css";
 @import "imports/post.css";
 @import "imports/edit.css";
+@import "imports/singlePost.css";
 
 .sp-main {
   margin-left: 2rem;

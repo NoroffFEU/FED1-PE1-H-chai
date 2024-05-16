@@ -1,22 +1,6 @@
 import { API_BLOG_POST } from "./constants.mjs";
 import { renderPagination } from "./pagination.mjs";
-
-export async function getPost (url) {
-  try {
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    const json = await response.json();
-
-    return json;
-  } catch (error) {
-    console.log(error);
-    throw error;
-  }
-}
+import { getPost } from "./constants.mjs";
 
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -28,11 +12,14 @@ export function generateFeedHTML(post) {
   const postContainer = document.createElement('a');
   postContainer.classList.add('post-container');
   postContainer.id = post.id;
+  postContainer.href = `post/singlePost.html?id=${postContainer.id}`;
 
+  const figure = document.createElement('figure');
   const thumbnail = document.createElement('img');
   thumbnail.classList.add('thumbnail');
   thumbnail.src = post.media.url;
   thumbnail.alt = post.media.alt;
+  figure.appendChild(thumbnail);
 
   const postTextContainer = document.createElement('div');
   postTextContainer.classList.add('post-text-container');
@@ -71,7 +58,7 @@ export function generateFeedHTML(post) {
 
   postTextContainer.append(postDetail, postTitle);
 
-  postContainer.append(thumbnail, postTextContainer);
+  postContainer.append(figure, postTextContainer);
 
   return postContainer;
 }

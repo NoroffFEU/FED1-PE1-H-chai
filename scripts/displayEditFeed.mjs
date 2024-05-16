@@ -1,5 +1,5 @@
 import { API_BLOG_POST } from "./constants.mjs";
-import { getPost } from "./displayFeed.mjs";
+import { getPost } from "./constants.mjs";
 import { displayPosts } from "./displayFeed.mjs";
 import { renderPagination } from "./pagination.mjs";
 

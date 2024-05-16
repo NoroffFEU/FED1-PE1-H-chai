@@ -1,6 +1,6 @@
 import { displayPosts } from "./displayFeed.mjs";
 import { API_BLOG_POST } from "./constants.mjs";
-import { getPost } from "./displayFeed.mjs";
+import { getPost } from "./constants.mjs";
 
 let currentPage = 1;
 

@@ -145,6 +145,7 @@
   font-family: var(--font-cormorant);
   font-size: 2.4rem;
   font-weight: 600;
+  color: var(--font-black);
 }
 
 .pagination {
@@ -235,9 +236,10 @@
 
   .post-container {
     position: relative;
+    cursor: pointer;
   }
 
-  .post-container::before {
+  /* .post-container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -272,11 +274,22 @@
 
   .post-container:hover::after {
     opacity: 1;
+  } */
+
+  figure {
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
   }
 
   .thumbnail {
     aspect-ratio: 3/2;
     border-radius: 5px 5px 0 0;
+    transition: all 0.5s ease;
+  }
+
+  .post-container:hover .thumbnail {
+    transform: scale(1.1);
   }
 
   .post-text-container {

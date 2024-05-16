@@ -16,11 +16,4 @@
     width: 25%;
     margin: 0 0 5.6rem auto;
   }
-
-  .edit-feed {
-    
-    & .post-container::after {
-        content: "EDIT";
-      }
-  }
 }

@@ -1,12 +1,7 @@
 import { API_BLOG_POST } from "./constants.mjs";
 import { renderPagination } from "./pagination.mjs";
 import { getPost } from "./constants.mjs";
-
-function formatDate(dateString) {
-  const date = new Date(dateString);
-  const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-  return date.toLocaleDateString('en-GB', options);
-}
+import { formatDate } from "./formatDate.mjs";
 
 export function generateFeedHTML(post) {
   const postContainer = document.createElement('a');

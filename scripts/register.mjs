@@ -53,6 +53,7 @@ async function collectFormData (event) {
   try {
     await registerUser(API_REGISTER_USER, user);
     alert(`Registration successful!\nUsername: ${user.name}\nEmail: ${user.email}`);
+    window.location.href = 'login.html';
   } catch (error) {
     alert(`${error.message}. Please try again.`);
   }

@@ -17,12 +17,16 @@ async function postBlog (url, data) {
     const response = await fetch(url, postData);
     const json = await response.json();
 
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
     console.log(json);
 
     return json;
   } catch (error) {
-    console.log(error);
-    throw error;
+    console.error("Fetch error:", error);
+    throw error
   }
 }
 
@@ -64,6 +68,7 @@ async function createNewPost(event) {
     alert('New post was successfully posted!')
     console.log(blogPost);
   } catch (error) {
+    console.error("Unhandled promise rejection:", error);
     alert('Something went wrong. Please try again.');
   }
 }

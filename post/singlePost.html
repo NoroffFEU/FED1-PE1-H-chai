@@ -18,6 +18,7 @@
     />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script type="module" src="../scripts/displaySinglePost.mjs"></script>
+    <script type="module" src="../scripts/singlePagination.mjs"></script>
   </head>
   <body>
     <header>
@@ -132,7 +133,19 @@
 
     <main class="sp-main">
       <div class="article-container"></div>
-      <div class="page-buttons"></div>
+      <div class="page-buttons">
+        <button class="previous-post">
+          <i class="fa-solid fa-caret-left"></i>
+          Previous
+          <p class="previous-post-title"></p>
+        </button>
+        <a href="../index.html">See all posts</a>
+        <button class="next-post">
+          Next
+          <i class="fa-solid fa-caret-right"></i>
+          <p class="next-post-title"></p>
+        </button>
+      </div>
     </main>
 
     <footer>

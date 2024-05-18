@@ -3,11 +3,11 @@ import { getPost } from "./constants.mjs";
 import { formatDate } from "./formatDate.mjs";
 
 // extract the post ID from the URL's query string
-let url = new URL(window.location.href);
-let params = url.searchParams;
-let postId = params.get('id');
+const url = new URL(window.location.href);
+const params = url.searchParams;
+const postId = params.get('id');
 
-//const posts = await getPost(API_BLOG_POST);
+// URL of single post page (with its id)
 const API_SINGLE_POST = `${API_BLOG_POST}/${postId}`;
 
 function generateSinglePostHTML(post) {
@@ -55,7 +55,7 @@ function generateSinglePostHTML(post) {
   return singlePostContainer;
 }
 
-function displaySinglePost(post) {
+export function displaySinglePost(post) {
   const articleContainer = document.querySelector('.article-container');
   articleContainer.innerHTML = '';
   const articleHTML = generateSinglePostHTML(post);
@@ -64,3 +64,4 @@ function displaySinglePost(post) {
 
 const singlePost = await getPost(API_SINGLE_POST);
 displaySinglePost(singlePost.data);
+

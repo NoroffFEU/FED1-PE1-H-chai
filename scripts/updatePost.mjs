@@ -2,11 +2,11 @@ import { API_BLOG_POST } from "./constants.mjs";
 
 let accessToken;
 
-async function postBlog (url, data) {
+async function updateBlog(url, data) {
   try {
     accessToken = localStorage.getItem('accessToken');
     const postData = {
-      method: 'POST',
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${accessToken}`
@@ -21,8 +21,6 @@ async function postBlog (url, data) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    console.log(json);
-
     return json;
   } catch (error) {
     console.error("Fetch error:", error);
@@ -30,7 +28,7 @@ async function postBlog (url, data) {
   }
 }
 
-async function createNewPost(event) {
+export async function updatePostContent(event) {
   event.preventDefault();
 
   const titleInput = document.getElementById('title');
@@ -53,7 +51,7 @@ async function createNewPost(event) {
   tagsInput.value = '';
   contentInput.value = '';
 
-  const blogPost = {
+  const updatedBlogPost = {
     title: title,
     tags: tagsArray,
     body: content,
@@ -63,18 +61,18 @@ async function createNewPost(event) {
     }
   }
 
+  const url = new URL(window.location.href);
+  const params = url.searchParams;
+  const postId = params.get('id');
+  const API_SINGLE_POST = `${API_BLOG_POST}/${postId}`;
+
   try {
-    await postBlog(API_BLOG_POST, blogPost);
-    alert('New post was successfully posted!')
-    console.log(blogPost);
+    await updateBlog(API_SINGLE_POST, updatedBlogPost);
+    alert('Blog post was successfully updated!');
+    window.location.href = `singlePost.html?id=${postId}`;
   } catch (error) {
     console.error(error);
-    alert('Something went wrong. Please try again.');
+    alert('Something went wrong. Please try again.')
   }
 }
 
-const postButton = document.getElementById('create-button');
-postButton.addEventListener('click', createNewPost);
-
-accessToken = localStorage.getItem('accessToken');
-console.log(accessToken);

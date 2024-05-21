@@ -158,17 +158,21 @@
         </div>
       </section>
       <div class="filter">
-        <div class="tags"></div>
-        <button class="reset">Reset Filters</button>
+        <div class="tags-container">
+          <ul class="tags"></ul>
+          <button class="reset">Reset Filters</button>
+        </div>
         <div class="sort">
-          <iconify-icon
-            icon="mdi:sort"
-            width="16px"
-            height="16px"
-            style="color: #085ca6"
-          ></iconify-icon>
-          <button>Oldest First</button>
-          <button>Newest First</button>
+          <button class="sort-icon">
+            <iconify-icon
+              icon="mdi:sort"
+              width="24px"
+              height="24px"
+              style="color: #085ca6"
+            ></iconify-icon>
+          </button>
+          <button class="sort-text">Oldest First</button>
+          <button class="sort-text">Newest First</button>
         </div>
       </div>
       <section class="feed"></section>

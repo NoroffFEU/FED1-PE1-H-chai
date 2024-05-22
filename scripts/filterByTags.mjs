@@ -1,7 +1,7 @@
 import { API_BLOG_POST } from "./constants.mjs";
 import { getPost } from "./constants.mjs";
 import { displayPosts } from "./displayFeed.mjs";
-import { renderPagination } from "./pagination.mjs";
+import { getCurrentPage, renderPagination, renderPostsForPage, setCurrentPage } from "./pagination.mjs";
 
 const posts = await getPost(API_BLOG_POST);
 
@@ -31,16 +31,18 @@ export function displayAllTags() {
 function displayFilteredPost(event) {
   const tag = event.target.textContent;
   const filteredPosts = posts.data.filter(post => post.tags.includes(tag));
-  console.log(filteredPosts);
 
   displayPosts(filteredPosts);
+  setCurrentPage(1);
   let totalPages = Math.ceil(filteredPosts.length / 12);
   renderPagination(totalPages);
 }
 
 const resetFilter = document.querySelector('.reset');
 resetFilter.addEventListener('click', () => {
+  setCurrentPage(1);
   displayPosts(posts.data.slice(0, 12));
+  renderPostsForPage(getCurrentPage());
   let totalPages = Math.ceil(posts.data.length / 12);
   renderPagination(totalPages);
 })

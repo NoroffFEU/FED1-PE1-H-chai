@@ -4,6 +4,14 @@ import { getPost } from "./constants.mjs";
 
 let currentPage = 1;
 
+export function getCurrentPage() {
+  return currentPage;
+}
+
+export function setCurrentPage(page) {
+  currentPage = page;
+}
+
 export function renderPagination(totalPages) {
   const pagination = document.querySelector('.pagination');
   pagination.innerHTML = '';
@@ -26,7 +34,7 @@ export function renderPagination(totalPages) {
 
 const posts = await getPost(API_BLOG_POST);
 
-function renderPostsForPage(pageNumber) {
+export function renderPostsForPage(pageNumber) {
   const startIndex = (pageNumber - 1) * 12;
   const endIndex = startIndex + 12;
   const postsForPage = posts.data.slice(startIndex, endIndex);

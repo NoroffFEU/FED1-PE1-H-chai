@@ -66,7 +66,7 @@ if (currentIndex < posts.data.length - 1) {
       const API_NEXT_POST = `${API_BLOG_POST}/${nextPostId}`;
       const nextPost = await getPost(API_NEXT_POST);
       displaySinglePost(nextPost.data);
-      window.location.href = `/post/singlePost.html?id=${nextPostId}`;
+      window.location.href = `singlePost.html?id=${nextPostId}`;
       currentIndex = nextIndex;
 
       if (currentIndex >= posts.data.length - 1) {

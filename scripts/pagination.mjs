@@ -1,6 +1,7 @@
 import { displayPosts } from "./displayFeed.mjs";
 import { API_BLOG_POST } from "./constants.mjs";
 import { getPost } from "./constants.mjs";
+import { sortedPosts } from "./sortDate.mjs";
 
 let currentPage = 1;
 
@@ -35,9 +36,10 @@ export function renderPagination(totalPages) {
 const posts = await getPost(API_BLOG_POST);
 
 export function renderPostsForPage(pageNumber) {
+  const data = sortedPosts.length > 0 ? sortedPosts : posts.data;
   const startIndex = (pageNumber - 1) * 12;
   const endIndex = startIndex + 12;
-  const postsForPage = posts.data.slice(startIndex, endIndex);
+  const postsForPage = data.slice(startIndex, endIndex);
 
   displayPosts(postsForPage);
 }

@@ -52,6 +52,10 @@
     text-align: center;
     margin-bottom: 1.6rem;
   }
+
+  .post-text-container {
+    padding: 1.6rem 1.6rem 3.2rem 1.6rem;
+  }
 }
 
 .carousel {
@@ -261,10 +265,12 @@
 
   .main-right {
     width: 60%;
+
     h2 {
       font-size: 4.8rem;
       margin: 1.6rem 0;
     }
+
   }
 
   .carousel {
@@ -321,7 +327,7 @@
   .feed {
     padding: 0 12.8rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2.4rem;
   }
 

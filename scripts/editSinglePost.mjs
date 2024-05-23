@@ -1,5 +1,6 @@
 import { API_BLOG_POST } from "./constants.mjs";
 import { getPost } from "./constants.mjs";
+import { deletePostContent } from "./deletePost.mjs";
 import { updatePostContent } from "./updatePost.mjs";
 
 // extract the post ID from the URL's query string
@@ -28,8 +29,12 @@ function insertPostDetail() {
   content.value = singlePost.data.body;
 }
 
+insertPostDetail();
+
 const updateButton = document.getElementById('update-button');
 updateButton.addEventListener('click', updatePostContent);
 
-insertPostDetail();
+const deleteButton = document.getElementById('delete-button');
+deleteButton.addEventListener('click', deletePostContent);
+
 

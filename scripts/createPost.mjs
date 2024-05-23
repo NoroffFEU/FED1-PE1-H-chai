@@ -21,8 +21,6 @@ async function postBlog (url, data) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    console.log(json);
-
     return json;
   } catch (error) {
     console.error("Fetch error:", error);
@@ -66,7 +64,7 @@ async function createNewPost(event) {
   try {
     await postBlog(API_BLOG_POST, blogPost);
     alert('New post was successfully posted!')
-    console.log(blogPost);
+    window.location.href = 'index.html';
   } catch (error) {
     console.error(error);
     alert('Something went wrong. Please try again.');
@@ -77,4 +75,3 @@ const postButton = document.getElementById('create-button');
 postButton.addEventListener('click', createNewPost);
 
 accessToken = localStorage.getItem('accessToken');
-console.log(accessToken);

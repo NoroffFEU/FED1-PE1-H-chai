@@ -29,7 +29,9 @@ if (currentIndex > 0) {
       const API_PREVIOUS_POST = `${API_BLOG_POST}/${previousPostId}`;
       const previousPost = await getPost(API_PREVIOUS_POST);
       displaySinglePost(previousPost.data);
-      window.location.href = `/post/singlePost.html?id=${previousPostId}`;
+      const fullURL = window.location.href;
+      const myRepoName = fullURL.split('/')[3];
+      window.location.href = `${window.location.origin}/${myRepoName}/post/singlePost.html?id=${previousPostId}`;
       currentIndex = previousIndex;
 
       if (currentIndex <= 0) {
@@ -66,7 +68,9 @@ if (currentIndex < posts.data.length - 1) {
       const API_NEXT_POST = `${API_BLOG_POST}/${nextPostId}`;
       const nextPost = await getPost(API_NEXT_POST);
       displaySinglePost(nextPost.data);
-      window.location.href = `${window.location.origin}/post/singlePost.html?id=${nextPostId}`;
+      const fullURL = window.location.href;
+      const myRepoName = fullURL.split('/')[3];
+      window.location.href = `${window.location.origin}/${myRepoName}/post/singlePost.html?id=${nextPostId}`;
       currentIndex = nextIndex;
 
       if (currentIndex >= posts.data.length - 1) {

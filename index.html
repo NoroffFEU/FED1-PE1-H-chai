@@ -147,11 +147,17 @@
           <h2>Latest</h2>
           <!-- carousel JS & creating HTML dynamically -->
           <div class="carousel">
-            <button class="carousel-button previous-button">
+            <button
+              class="carousel-button previous-button"
+              aria-label="Carousel previous button"
+            >
               <i class="fa-solid fa-chevron-left"></i>
             </button>
             <div class="latest"></div>
-            <button class="carousel-button next-button">
+            <button
+              class="carousel-button next-button"
+              aria-label="Carousel next button"
+            >
               <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
@@ -163,7 +169,7 @@
           <button class="reset">Reset Filters</button>
         </div>
         <div class="sort">
-          <button class="sort-icon">
+          <button class="sort-icon" aria-label="Icon for sorting by date">
             <iconify-icon
               icon="mdi:sort"
               width="24px"

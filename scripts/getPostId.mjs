@@ -3,7 +3,6 @@ export function getPostId() {
   postContainers.forEach(postContainer => {
     postContainer.addEventListener('click', () => {
       const postId = postContainer.getAttribute('id');
-      console.log(postId);
     });
   })
 }

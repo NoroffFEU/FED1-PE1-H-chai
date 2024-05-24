@@ -42,7 +42,6 @@ if (currentIndex > 0) {
         previousPostTitleContainer.textContent = posts.data[currentIndex - 1].title;
       }
 
-      console.log(currentIndex);
     }
   })
 }
@@ -81,7 +80,6 @@ if (currentIndex < posts.data.length - 1) {
         nextPostTitleContainer.textContent = posts.data[currentIndex + 1].title;
       }
 
-      console.log(currentIndex);
     }
   })
 }

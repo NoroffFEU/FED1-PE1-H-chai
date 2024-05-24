@@ -1,9 +1,3 @@
-/* const user = {
-  name: 'hikari',
-  email: 'hikari-project-exam@stud.noroff.no',
-  password: 'hikarifedaug23f',
-} */
-
 import { displayLatestPosts } from "./carousel.mjs";
 import { displayLatestSinglePost } from "./carousel.mjs";
 import { API_BLOG_POST } from "./constants.mjs";

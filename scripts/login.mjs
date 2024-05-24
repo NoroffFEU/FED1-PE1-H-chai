@@ -18,8 +18,6 @@ async function loginUser(url, data) {
     if (response.ok) {
       accessToken = json.data.accessToken;
       localStorage.setItem('accessToken', accessToken);
-      console.log(json);
-      console.log(accessToken);
       window.location.href = '../post/index.html';
     } else {
       throw new Error(json.error);

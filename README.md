@@ -1,6 +1,6 @@
 # FED1 Project Exam 1
 
-![Main visual image for the project 'HotView Labs'](image/README-image.png)
+![Main visual image for the project 'HotView Labs'](images/README-image.png)
 
 [Visit the site](https://norofffeu.github.io/FED1-PE1-H-chai/)
 

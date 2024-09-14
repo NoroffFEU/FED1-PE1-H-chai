@@ -5,6 +5,7 @@ async function registerUser(url, data) {
     const postData = {
       method: 'POST',
       headers: {
+"X-Noroff-API-Key": "0af14e10-9129-4f49-bc74-e4611114ff9c",
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),

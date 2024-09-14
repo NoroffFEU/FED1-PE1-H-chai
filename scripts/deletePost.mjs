@@ -8,6 +8,7 @@ async function deleteBlog(url) {
     const response = await fetch(url, {
       method: 'DELETE',
       headers: {
+"X-Noroff-API-Key": "0af14e10-9129-4f49-bc74-e4611114ff9c",
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${accessToken}`
       }

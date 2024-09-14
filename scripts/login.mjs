@@ -55,7 +55,7 @@ async function collectUserData(event) {
   try {
     await loginUser(API_LOGIN, user);
   } catch (error) {
-    alert('Login failed. Please try again.');
+    alert(error.message);
   }
 }
 

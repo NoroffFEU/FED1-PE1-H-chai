@@ -26,7 +26,7 @@ async function loginUser(url, data) {
     
     return json;
   } catch (error) {
-    alert(error.message);
+    console.log(error);
     throw error;
   }
 }
@@ -55,7 +55,7 @@ async function collectUserData(event) {
   try {
     await loginUser(API_LOGIN, user);
   } catch (error) {
-    alert(error.message);
+    alert('Login failed. Please try again.');
   }
 }
 

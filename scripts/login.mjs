@@ -26,7 +26,7 @@ async function loginUser(url, data) {
     
     return json;
   } catch (error) {
-    console.log(error);
+    alert(error.message);
     throw error;
   }
 }
